@@ -55,10 +55,6 @@ public class FreightService {
             throw new FreightNotFoundException();
     }
 
-    public Freight getFreightByProductId(int id) {
-        return freightRepository.findFreightByProductId(id);
-    }
-
     public String deleteFreight(int id) {
         freightRepository.deleteById(id);
         return "Freight removed " + id;
